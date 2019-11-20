@@ -7,13 +7,13 @@
 <h2>Missions</h2>
 <div class="jumbotron">
     @using (Html.BeginForm())
-    {
+     {
         <div class="form-group">
             @Html.LabelFor(model => model.missionName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownListFor(model => model.missionName, new SelectList(ViewBag.MissionNames, "missionName", "missionName"))
             </div>
-            <input type="submit" value="submit" />
+            <input type="submit" value="Submit" />
         </div>
-    }
+     }
 </div>

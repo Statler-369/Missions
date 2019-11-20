@@ -71,5 +71,16 @@ namespace Missions.Controllers
 
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Missions(string missionName)
+        {
+            MissionQuestions mission = new MissionQuestions
+            {
+                missionDetails = listMissions.Find(x => x.missionName == missionName)
+            };
+
+            return View("MissionInfo", mission);
+        }
     }
 }
