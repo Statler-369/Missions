@@ -43,6 +43,8 @@ namespace Missions.Controllers
                 dominantReligion = ""
             }
         };
+
+
         public ActionResult Index()
         {
             return View();
@@ -64,11 +66,8 @@ namespace Missions.Controllers
 
         public ActionResult Missions()
         {
-            ViewBag.MissionNames = new List<string>();
-            foreach(Mission mission in listMissions)
-            {
-                ViewBag.Missionnames.Add(mission.missionName);
-            }
+
+            ViewBag.MissionNames = listMissions;
 
             return View();
         }
