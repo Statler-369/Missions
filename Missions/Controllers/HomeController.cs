@@ -22,6 +22,7 @@ namespace Missions.Controllers
                 missionSymbol = "California symbol",
                 dominantReligion = "What's religion?"
             },
+
             new Mission
             {
                 missionName = "Enter another mission",
@@ -32,6 +33,7 @@ namespace Missions.Controllers
                 missionSymbol = "",
                 dominantReligion = ""
             },
+
             new Mission
             {
                 missionName = "Enter another mission",
@@ -44,6 +46,33 @@ namespace Missions.Controllers
             }
         };
 
+        public static List<MissionQuestions> listMissionQuestions = new List<MissionQuestions>
+        {
+            new MissionQuestions
+            {
+                missionDetails = listMissions[0],
+                questions = new List<string>(),
+                answers = new List<string>()
+            },
+
+            new MissionQuestions
+            {
+                missionDetails = listMissions[1],
+                questions = new List<string>(),
+                answers = new List<string>()
+            },
+
+            new MissionQuestions
+            {
+                missionDetails = listMissions[2],
+                questions = new List<string>(),
+                answers = new List<string>()
+            }
+        };
+
+        /**********************************************************************************
+            Hard code the questions and answers in the object
+        **********************************************************************************/
 
         public ActionResult Index()
         {
@@ -76,10 +105,7 @@ namespace Missions.Controllers
         [HttpPost]
         public ActionResult Missions(string missionName)
         {
-            MissionQuestions mission = new MissionQuestions
-            {
-                missionDetails = listMissions.Find(x => x.missionName == missionName)
-            };
+            
 
             return View("MissionInfo", mission);
         }
