@@ -64,14 +64,15 @@ namespace Missions.Controllers
             return View();
         }
 
+        //This method goes to the page where the user can select their mission
         public ActionResult Missions()
-        {
-
+        {            
             ViewBag.MissionNames = listMissions;
 
             return View();
         }
 
+        //This method goes to the page with all of the frequently asked questions.
         [HttpPost]
         public ActionResult Missions(string missionName)
         {
