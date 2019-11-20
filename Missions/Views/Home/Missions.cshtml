@@ -1,0 +1,11 @@
+﻿@model Missions.Models.Mission
+
+@{
+    ViewBag.Title = "Missions";
+}
+
+<h2>Missions</h2>
+<!--This page is currently very terrible.-->
+@Html.BeginForm()
+@Html.DropDownListFor(x => x.missionName, new SelectList(ViewBag.MissionNames, "missionName", "missionAddress"))
+
