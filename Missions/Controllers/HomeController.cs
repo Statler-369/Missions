@@ -44,6 +44,33 @@ namespace Missions.Controllers
             }
         };
 
+        public static List<MissionQuestions> listMissionQuestions = new List<MissionQuestions>
+        {
+            new MissionQuestions
+            {
+                missionDetails = listMissions[0],
+                questions = new List<string>(),
+                answers = new List<string>()
+            },
+
+            new MissionQuestions
+            {
+                missionDetails = listMissions[1],
+                questions = new List<string>(),
+                answers = new List<string>()
+            },
+
+            new MissionQuestions
+            {
+                missionDetails = listMissions[2],
+                questions = new List<string>(),
+                answers = new List<string>()
+            }
+        };
+
+        /**********************************************************************************
+            Hard code the questions and answers in the object
+        **********************************************************************************/
 
         public ActionResult Index()
         {
