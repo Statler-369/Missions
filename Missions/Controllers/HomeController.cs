@@ -24,13 +24,13 @@ namespace Missions.Controllers
             },
             new Mission
             {
-                missionName = "Enter another mission",
-                missionPresident = "",
-                missionAddress = "",
-                missionClimate = "",
-                missionLanguage = "",
-                missionSymbol = "",
-                dominantReligion = ""
+                missionName = "Puerto Rico San Juan",
+                missionPresident = "President Smart",
+                missionAddress = "Urb. Jardines de Caparra, #500 Calle Marginal Norte, Bayamon PR 00959",
+                missionClimate = "Hot and Humid",
+                missionLanguage = "Spanish",
+                missionSymbol = "Puerto Rico Symbol",
+                dominantReligion = "Catholic"
             },
             new Mission
             {
