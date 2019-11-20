@@ -7,7 +7,7 @@ namespace Missions.Models
 {
     public class MissionQuestions
     {
-        public string missionName { get; set; }
+        public Mission missionDetails { get; set; }
         public List<string> questions { get; set; }
         public List<string> answers { get; set; }
 

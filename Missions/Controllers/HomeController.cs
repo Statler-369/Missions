@@ -24,13 +24,13 @@ namespace Missions.Controllers
             },
             new Mission
             {
-                missionName = "Enter another mission",
-                missionPresident = "",
-                missionAddress = "",
-                missionClimate = "",
-                missionLanguage = "",
-                missionSymbol = "",
-                dominantReligion = ""
+                missionName = "Puerto Rico San Juan",
+                missionPresident = "President Smart",
+                missionAddress = "Urb. Jardines de Caparra, #500 Calle Marginal Norte, Bayamon PR 00959",
+                missionClimate = "Hot and Humid",
+                missionLanguage = "Spanish",
+                missionSymbol = "Puerto Rico Symbol",
+                dominantReligion = "Catholic"
             },
             new Mission
             {
@@ -44,6 +44,33 @@ namespace Missions.Controllers
             }
         };
 
+        public static List<MissionQuestions> listMissionQuestions = new List<MissionQuestions>
+        {
+            new MissionQuestions
+            {
+                missionDetails = listMissions[0],
+                questions = new List<string>(),
+                answers = new List<string>()
+            },
+
+            new MissionQuestions
+            {
+                missionDetails = listMissions[1],
+                questions = new List<string>(),
+                answers = new List<string>()
+            },
+
+            new MissionQuestions
+            {
+                missionDetails = listMissions[2],
+                questions = new List<string>(),
+                answers = new List<string>()
+            }
+        };
+
+        /**********************************************************************************
+            Hard code the questions and answers in the object
+        **********************************************************************************/
 
         public ActionResult Index()
         {
