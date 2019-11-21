@@ -1,4 +1,4 @@
-﻿@model Missions.Models.MissionQuestions
+﻿@model Missions.Models.Mission
 
 @{
     ViewBag.Title = "MissionInfo";
@@ -6,13 +6,82 @@
 
 <h2>MissionInfo</h2>
 
-<div>
-    <h4>MissionQuestions</h4>
-    <hr />
-    <dl class="dl-horizontal">
-    </dl>
+<div class="jumbotron">
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.missionName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.missionPresident)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.missionAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.missionLanguage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.missionClimate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dominantReligion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.missionSymbol)
+            </th>
+            <th></th>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.missionName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.missionPresident)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.missionAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.missionLanguage)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.missionClimate)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.dominantReligion)
+            </td>
+            <td>
+                <img style="width:100px; height:auto; " src="~/Content/images/@Model.missionSymbol" />
+            </td>
+        </tr>
+
+    </table>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <h2 class="col-md-6">Questions</h2>
+            <h2 class="col-md-6">Answers</h2>
+        </div>
+        @{int iCount = 0; }
+        @foreach (KeyValuePair<string, string> item in ViewBag.Dictionary)
+            {
+                iCount++;
+            <div class="row">
+                <div class="col-md-6">@iCount @item.Key </div>
+                <div class="col-md-6">@item.Value</div>
+            </div>
+            <div class="row">
+                <div class="col-md-6"></div>
+                @Html.TextBox("Response", null, new { @class = "form-control" })
+                <div class="col-md-6"></div>
+                <a class="btn btn-default" href="">Reply &raquo;</a>  
+            </div>
+            <br />
+            }
+    </div>
+</div>

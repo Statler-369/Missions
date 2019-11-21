@@ -15,11 +15,11 @@ namespace Missions.Controllers
             new Mission
             {
                 missionName = "California San Bernardino",
-                missionPresident = "",
+                missionPresident = "President Dixon",
                 missionAddress = "7000 Central Avenue Highland, CA 92346",
                 missionClimate = "Hot and dry",
                 missionLanguage = "English and Spanish",
-                missionSymbol = "California symbol",
+                missionSymbol = "CaliSymbol.jpg",
                 dominantReligion = "What's religion?"
             },
             new Mission
@@ -29,18 +29,18 @@ namespace Missions.Controllers
                 missionAddress = "Urb. Jardines de Caparra, #500 Calle Marginal Norte, Bayamon PR 00959",
                 missionClimate = "Hot and Humid",
                 missionLanguage = "Spanish",
-                missionSymbol = "Puerto Rico Symbol",
+                missionSymbol = "PuertoRicoSymbol.jpg",
                 dominantReligion = "Catholic"
             },
             new Mission
             {
-                missionName = "Enter another mission",
-                missionPresident = "",
-                missionAddress = "",
-                missionClimate = "",
-                missionLanguage = "",
-                missionSymbol = "",
-                dominantReligion = ""
+                missionName = "Indonesia Jakarta Mission",
+                missionPresident = "President Rowley",
+                missionAddress = "Jalan Senopati 115 Kebayoran Baru Jakarta, 12190, Indonesia",
+                missionClimate = "Hot and Humid",
+                missionLanguage = "Indonesian",
+                missionSymbol = "IndonesiaSymbol.jfif",
+                dominantReligion = "Islam"
             }
         };
 
@@ -97,6 +97,18 @@ namespace Missions.Controllers
             ViewBag.MissionNames = listMissions;
 
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Missions(string missionName)
+        {
+            ViewBag.Dictionary = new Dictionary<string, string>
+            {
+                {"What was your favorite food?", "I hated all the food, I was sick the entire time :("},
+                {"What was the weather like?", "Very hot. I wish I had brought more short-sleeve shirts and less sweaters."},
+                {"What is the church like here?", "The members are incredible! Lots of work to be done, the field is white ALREADY to harvest!!!"}
+            };
+            return View("MissionInfo", listMissions.Find(x => x.missionName == missionName));
         }
     }
 }

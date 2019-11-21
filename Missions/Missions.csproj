@@ -133,7 +133,11 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\CaliSymbol.jpg" />
+    <Content Include="Content\images\IndonesiaSymbol.jfif" />
     <Content Include="Content\images\missionary-quote.jpg" />
+    <Content Include="Content\images\OriginPic.jpg" />
+    <Content Include="Content\images\PuertoRicoSymbol.jpg" />
     <Content Include="Content\images\world-map.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
